@@ -1,0 +1,37 @@
+{
+  "name": "yield-curve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --prefix \"{time}\" -t \"HH:mm:ss\" -c \"bgCyan.bold,bgGreen.bold,bgGrey.bold\" -n \"esbuild,BrowserSync,Express\" \"npm run build:watch\" \"npm run browser:reload\" \"npm run serve:local\"",
+    "build": "node --require esbuild-register build.ts",
+    "build:watch": "set WATCH=true && npm run build",
+    "browser:reload": "wait-on public/index.js && browser-sync start --notify=false --proxy localhost:3030 --files public/* --port 3000",
+    "serve:local": "node --require esbuild-register local_hosting.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.12",
+    "@mui/x-tree-view": "^6.0.0-beta.0",
+    "ag-grid-community": "^30.1.0",
+    "ag-grid-react": "^30.1.0",
+    "browser-sync": "^2.29.3",
+    "esbuild-register": "^3.5.0",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "wait-on": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.2.7",
+    "concurrently": "^8.2.1",
+    "esbuild": "^0.19.3"
+  }
+}
