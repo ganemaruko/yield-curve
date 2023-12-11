@@ -5,8 +5,8 @@ pub fn shift_calendar(size: i64, tenor: Tenor) {
 }
 
 mod test {
-    use crate::core::Tenor;
     use super::shift_calendar;
+    use crate::core::Tenor;
 
     #[test]
     fn test_interpolate() {
