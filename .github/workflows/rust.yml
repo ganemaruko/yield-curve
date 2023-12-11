@@ -27,6 +27,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run doc
         run: cd ./apps/yield_curve_wasm && cargo doc --no-deps
+
       - name: Deploy
         uses: actions/upload-pages-artifact@v1
         with:
