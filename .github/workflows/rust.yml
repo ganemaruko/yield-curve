@@ -30,7 +30,7 @@ jobs:
       - name: Deploy
         uses: actions/upload-pages-artifact@v1
         with:
-          path: target/doc
+          path: apps/yield_curve_wasm/target/doc
 
   deploy:
     needs: doc
