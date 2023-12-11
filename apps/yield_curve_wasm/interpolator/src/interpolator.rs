@@ -1,2 +1,2 @@
-mod core;
-mod linear_interpolator;
+pub mod core;
+pub mod linear_interpolator;

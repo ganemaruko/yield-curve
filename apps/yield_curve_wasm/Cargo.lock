@@ -21,6 +21,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "core"
+version = "0.1.0"
+
+[[package]]
 name = "interpolator"
 version = "0.1.0"
 
@@ -76,6 +80,10 @@ dependencies = [
  "quote",
  "unicode-ident",
 ]
+
+[[package]]
+name = "tenor"
+version = "0.1.0"
 
 [[package]]
 name = "unicode-ident"
@@ -141,6 +149,7 @@ checksum = "ca6ad05a4870b2bf5fe995117d3728437bd27d7cd5f06f13c17443ef369775a1"
 name = "wasm-sample"
 version = "0.1.0"
 dependencies = [
+ "interpolator",
  "wasm-bindgen",
  "wee_alloc",
 ]
