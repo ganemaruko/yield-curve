@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "concurrently --prefix \"{time}\" -t \"HH:mm:ss\" -c \"bgCyan.bold,bgGreen.bold,bgGrey.bold\" -n \"esbuild,BrowserSync,Express\" \"npm run build:watch\" \"npm run browser:reload\" \"npm run serve:local\"",
     "build": "node --require esbuild-register build.ts",
     "build:watch": "set WATCH=true && npm run build",

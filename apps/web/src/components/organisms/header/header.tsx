@@ -52,28 +52,9 @@ export const Header = () => {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="ドリンク一覧" {...a11yProps(0)} />
-          <Tab label="料理一覧" {...a11yProps(1)} />
-          <Tab label="おすすめ" {...a11yProps(2)} />
-          <Tab label="季節の逸品" {...a11yProps(3)} />
-          <Tab label="その他" {...a11yProps(4)} />
+          <Tab label="Yield curve" {...a11yProps(0)} />
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0}>
-        <DrinkTab />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <DrinkTab />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        <DrinkTab />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={3}>
-        <DrinkTab />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={4}>
-        <DrinkTab />
-      </CustomTabPanel>
     </Box>
   );
 };
