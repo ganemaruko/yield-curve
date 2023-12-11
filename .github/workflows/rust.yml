@@ -15,9 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build
-        run: cd ./apps/yield_curve_wasm && cargo build --verbose
+        working-directory: apps/yield_curve_wasm
+        run: cargo build --verbose
       - name: Run tests
-        run: cd ./apps/yield_curve_wasm && cargo test --verbose
+        working-directory: apps/yield_curve_wasm
+        run: cargo test --verbose
 
   # create cargo document.
   doc:
@@ -26,7 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run doc
-        run: cd ./apps/yield_curve_wasm && cargo doc --no-deps
+        working-directory: apps/yield_curve_wasm
+        run: cargo doc --no-deps
 
       - name: Deploy
         uses: actions/upload-pages-artifact@v1
